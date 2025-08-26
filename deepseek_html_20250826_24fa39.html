@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙僧探究小报 - 西游记人物解析</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ma Shan Zheng', 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f0e1;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e0d6c9' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff9eb;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border: 2px solid #e8d9c0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .notebook-paper {
+            background: linear-gradient(to bottom, white 0%, white 99%), 
+                         linear-gradient(to bottom, #bae0ff 1px, transparent 1px);
+            background-size: 100% 2em;
+            background-position: 0 0;
+            background-repeat: repeat-y;
+            padding: 0 20px 20px 40px;
+            border-left: 1px solid #ffadad;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px dashed #f5c396;
+        }
+        
+        h1 {
+            color: #e67e22;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #fde3a7;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            color: #8e44ad;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 15px;
+            background: #fff4e3;
+            border-radius: 10px;
+            border: 2px dashed #f5c396;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid #e8d9c0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            color: #3498db;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffd8a6;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: #e67e22;
+        }
+        
+        .tab-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            background: #ffeaa7;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #fdcb6e;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #e74c3c;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #e74c3c;
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .trait-highlight {
+            background: #ffeaa7;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+        
+        .luggage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .item-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 2px solid #ffeaa7;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .item-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .item-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #e67e22;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .item-desc {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .word-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            min-height: 250px;
+            align-items: center;
+        }
+        
+        .word {
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .word:hover {
+            transform: scale(1.2);
+        }
+        
+        .word-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .word-1 { font-size: 1.2rem; background: #ffd8a6; color: #e67e22; }
+        .word-2 { font-size: 1.6rem; background: #a6e3ff; color: #3498db; }
+        .word-3 { font-size: 2.2rem; background: #ffa6a6; color: #e74c3c; }
+        .word-4 { font-size: 1.8rem; background: #c2ffa6; color: #27ae60; }
+        .word-5 { font-size: 1.4rem; background: #e0a6ff; color: #8e44ad; }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 3px dashed #f5c396;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .drawing {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .drawing-1 {
+            top: 50px;
+            right: 30px;
+            font-size: 150px;
+            color: #ffd8a6;
+            transform: rotate(15deg);
+        }
+        
+        .drawing-2 {
+            bottom: 50px;
+            left: 30px;
+            font-size: 120px;
+            color: #a6e3ff;
+            transform: rotate(-10deg);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .luggage-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .drawing {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="notebook-paper">
+            <div class="header">
+                <h1>沙僧探究小报</h1>
+                <div class="subtitle">西游记中最忠实的伙伴</div>
+                <div class="intro">
+                    沙僧，又名沙和尚、沙悟净，是《西游记》中唐僧的第三个徒弟。他原本是天庭的卷帘大将，因犯错被贬下凡间，在流沙河为妖，后经观音菩萨点化，保护唐僧西天取经。沙僧性格沉稳、忠诚老实，是取经团队中不可或缺的重要成员。
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-address-card"></i> 沙僧小档案</h2>
+                <div class="tab-container">
+                    <span class="tab">原名：沙悟净</span>
+                    <span class="tab">称号：卷帘大将</span>
+                    <span class="tab">武器：降妖宝杖</span>
+                    <span class="tab">身高：约4米</span>
+                    <span class="tab">体重：约250公斤</span>
+                    <span class="tab">性格：忠诚、稳重</span>
+                    <span class="tab">特长：水性极好</span>
+                    <span class="tab">原居：流沙河</span>
+                    <span class="tab">排名：三师弟</span>
+                    <span class="tab">特点：红发蓝脸</span>
+                </div>
+                <p>沙僧原本是天庭的卷帘大将，因在蟠桃会上失手打碎了玻璃盏，被玉帝贬下凡间，每七日受飞剑穿胸之苦。他在流沙河兴风作浪，危害行人。后来受观音菩萨点化，等候取经人。最终成为唐僧的徒弟，一路保护师父西天取经，最终修得正果，被封为金身罗汉。</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-history"></i> 沙僧大事件</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">卷帘大将被贬下凡</div>
+                        <div class="timeline-content">
+                            <p>沙僧原本是天庭的卷帘大将，负责玉帝的銮驾仪仗。因为在蟠桃会上失手打碎了琉璃盏，被玉帝贬下凡间，在流沙河为妖，每七日要受飞剑穿胸之苦。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">不幸遭遇</span>和<span class="trait-highlight">坚韧不拔</span>，能够承受极大的痛苦。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">流沙河遇观音</div>
+                        <div class="timeline-content">
+                            <p>观音菩萨前往东土寻找取经人时，路过流沙河遇到沙僧。沙僧向菩萨诉说了自己的苦难，菩萨点化他，让他等待取经人，将来可修得正果。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">虔诚向佛</span>和<span class="trait-highlight">渴望救赎</span>的心理。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">收为唐僧徒弟</div>
+                        <div class="timeline-content">
+                            <p>唐僧与悟空、八戒路过流沙河时，沙僧与悟空、八戒大战。最后在观音菩萨的帮助下，沙僧被收为第三个徒弟，加入取经团队。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">勇猛善战</span>和<span class="trait-highlight">服从安排</span>的品质。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">流沙河显神通</div>
+                        <div class="timeline-content">
+                            <p>在流沙河，沙僧展现了他出色的水性，帮助师徒渡过难关，还讲述了自己在流沙河的经历。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">水性特长</span>和<span class="trait-highlight">熟悉环境</span>的优势。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">真假美猴王事件</div>
+                        <div class="timeline-content">
+                            <p>在真假美猴王事件中，沙僧保持冷静，帮助分辨真假悟空，并前往花果山寻找真相。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">冷静理智</span>和<span class="trait-highlight">责任心</span>。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">通天河救师父</div>
+                        <div class="timeline-content">
+                            <p>在通天河，沙僧利用自己的水性，多次下水与妖怪搏斗，试图救出师父。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">勇敢无畏</span>和<span class="trait-highlight">忠诚护主</span>。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">火焰山借芭蕉扇</div>
+                        <div class="timeline-content">
+                            <p>在火焰山，沙僧协助悟空和八戒，保护唐僧，同时帮助想办法借芭蕉扇。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">团队合作</span>精神和<span class="trait-highlight">支持协助</span>的作用。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">取得真经修成正果</div>
+                        <div class="timeline-content">
+                            <p>历经九九八十一难，沙僧最终到达西天，取得真经，修成正果，被封为金身罗汉。</p>
+                            <p>体现了沙僧的<span class="trait-highlight">坚持不懈</span>和<span class="trait-highlight">终得善果</span>。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-suitcase"></i> 沙僧的行李箱</h2>
+                <p>沙僧的行李箱里装着他的品质和特点，从作者写作角度看，沙僧代表了团队中的稳定力量和中庸之道：</p>
+                <div class="luggage-grid">
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="item-title">忠诚之盾</div>
+                        <div class="item-desc">沙僧对师父和取经事业无比忠诚，从不退缩。这代表了团队中对信念的坚守。</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-balance-scale"></i></div>
+                        <div class="item-title">稳重之秤</div>
+                        <div class="item-desc">沙僧性格稳重，是团队的稳定剂。体现了中庸之道的平衡理念。</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-hands-helping"></i></div>
+                        <div class="item-title">勤劳之手</div>
+                        <div class="item-desc">沙僧任劳任怨，主动承担行李和杂务。代表了团队中默默奉献的精神。</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-water"></i></div>
+                        <div class="item-title">流沙之水</div>
+                        <div class="item-desc">沙僧水性极好，多次在水中帮助团队。象征 adaptability（适应能力）。</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-peace"></i></div>
+                        <div class="item-title">和平之符</div>
+                        <div class="item-desc">沙僧常调解悟空和八戒的矛盾，是团队的和事佬。代表和谐与调解的力量。</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-box-open"></i></div>
+                        <div class="item-title">责任之箱</div>
+                        <div class="item-desc">沙僧一直负责看守行李，象征他对职责的坚守和责任感。</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-heart"></i></div>
+                        <div class="item-title">虔诚之心</div>
+                        <div class="item-desc">沙僧对取经事业始终保持虔诚之心，代表了信仰的力量。</div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon"><i class="fas fa-fist-raised"></i></div>
+                        <div class="item-title">坚韧之志</div>
+                        <div class="item-desc">沙僧曾受飞剑穿胸之苦，但仍坚韧不拔，象征克服困难的精神。</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-comments"></i> 沙僧说</h2>
+                <p>沙僧最常说的词汇和句子（根据《西游记》原著统计）：</p>
+                <div class="word-cloud">
+                    <span class="word word-1">大师兄
+                        <span class="word-count">42</span>
+                    </span>
+                    <span class="word word-2">师父
+                        <span class="word-count">38</span>
+                    </span>
+                    <span class="word word-3">二师兄
+                        <span class="word-count">35</span>
+                    </span>
+                    <span class="word word-4">行李
+                        <span class="word-count">28</span>
+                    </span>
+                    <span class="word word-5">妖怪
+                        <span class="word-count">25</span>
+                    </span>
+                    <span class="word word-1">师父被捉走了
+                        <span class="word-count">18</span>
+                    </span>
+                    <span class="word word-2">大师兄说得对
+                        <span class="word-count">15</span>
+                    </span>
+                    <span class="word word-3">我来守护行李
+                        <span class="word-count">12</span>
+                    </span>
+                    <span class="word word-4">我们快去救师父
+                        <span class="word-count">10</span>
+                    </span>
+                    <span class="word word-5">此事还需从长计议
+                        <span class="word-count">8</span>
+                    </span>
+                    <span class="word word-1">二位师兄
+                        <span class="word-count">7</span>
+                    </span>
+                    <span class="word word-2">小心为妙
+                        <span class="word-count">6</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>沙僧探究小报 - 西游记人物解析 | 适合小学生的学习资料</p>
+                <p>© 2023 西游记学习小组</p>
+            </div>
+        </div>
+        
+        <div class="drawing drawing-1">
+            <i class="fas fa-dragon"></i>
+        </div>
+        <div class="drawing drawing-2">
+            <i class="fas fa-water"></i>
+        </div>
+    </div>
+
+    <script>
+        // 添加简单的交互效果
+        document.querySelectorAll('.item-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+        
+        document.querySelectorAll('.word').forEach(word => {
+            word.addEventListener('click', function() {
+                this.style.transform = this.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)';
+            });
+        });
+        
+        // 模拟点击效果
+        document.querySelectorAll('.section-title').forEach(title => {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+        
+        // 添加打印功能按钮
+        const printBtn = document.createElement('button');
+        printBtn.innerHTML = '<i class="fas fa-print"></i> 打印小报';
+        printBtn.style.position = 'fixed';
+        printBtn.style.bottom = '20px';
+        printBtn.style.right = '20px';
+        printBtn.style.padding = '10px 15px';
+        printBtn.style.background = '#e67e22';
+        printBtn.style.color = 'white';
+        printBtn.style.border = 'none';
+        printBtn.style.borderRadius = '5px';
+        printBtn.style.cursor = 'pointer';
+        printBtn.style.boxShadow = '0 3px 10px rgba(0,0,0,0.2)';
+        printBtn.style.zIndex = '1000';
+        printBtn.addEventListener('click', () => window.print());
+        document.body.appendChild(printBtn);
+    </script>
+</body>
+</html>
